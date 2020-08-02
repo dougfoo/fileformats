@@ -1,0 +1,8 @@
+{
+    "1":{"Name":"Chang","Age":30,"Gender":"M","Edu":"B","AvgHours":40,"SalaryK":80},
+    "2":{"Name":"Jenny","Age":35,"Gender":"F","Edu":"B","AvgHours":40,"SalaryK":82},
+    "3":{"Name":"David","Age":29,"Gender":"M","Edu":"P","AvgHours":45,"SalaryK":101},
+    "4":{"Name":"Nancy","Age":45,"Gender":"F","Edu":"M","AvgHours":50,"SalaryK":110},
+    "5":{"Name":"Killa","Age":50,"Gender":"M","Edu":"M","AvgHours":60,"SalaryK":150}
+}
+

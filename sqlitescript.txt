@@ -1,0 +1,17 @@
+-- sqlite prototype
+CREATE TABLE salary (
+	id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL,
+    age INTEGER NOT NULL,
+	gender TEXT NOT NULL,
+	edu TEXT ,
+	avgHours INTEGER ,
+	salaryk INTEGER NOT NULL
+);  
+
+ insert into salary values(1,'Doug',45,'M','M',45,'doug@foostack.ai')
+ insert into salary values(2,'Caprica',30,'F','P',51,'capira@six.com')
+ insert into salary values(3,'Chris',40, 'M',NULL,50,'rock@x.com')                                       
+
+ delete from salary where id=2      
+ insert into salary values(4,'Walter',60,'M','P',60,'w@heisenberg.com')                  
