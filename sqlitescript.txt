@@ -1,17 +1,72 @@
--- sqlite prototype
-CREATE TABLE salary (
-	id INTEGER PRIMARY KEY,
-	name TEXT NOT NULL,
-    age INTEGER NOT NULL,
-	gender TEXT NOT NULL,
-	edu TEXT ,
-	avgHours INTEGER ,
-	salaryk INTEGER NOT NULL
-);  
+-- -- Table: public.salary
 
- insert into salary values(1,'Doug',45,'M','M',45,'doug@foostack.ai')
- insert into salary values(2,'Caprica',30,'F','P',51,'capira@six.com')
- insert into salary values(3,'Chris',40, 'M',NULL,50,'rock@x.com')                                       
+DROP TABLE salary;
+CREATE TABLESPACE dtest LOCATION '/var/lib/postgresql/12/main/dtestdir';
 
- delete from salary where id=2      
- insert into salary values(4,'Walter',60,'M','P',60,'w@heisenberg.com')                  
+CREATE TABLE salary2
+(
+    id integer NOT NULL,
+    name varchar(128) NOT NULL,
+    age integer NOT NULL,
+    gender char(1) NOT NULL,
+    edu char(1),
+    avghours integer,
+    salaryk integer NOT NULL,
+    email varchar(128) NOT NULL
+)
+TABLESPACE dtest
+;
+
+
+CREATE FOREIGN TABLE salaryc
+(
+    id integer NOT NULL,
+    name varchar(128) NOT NULL,
+    age integer NOT NULL,
+    gender char(1) NOT NULL,
+    edu char(1),
+    avghours integer,
+    salaryk integer NOT NULL,
+    email varchar(128) NOT NULL    
+)
+SERVER cstore_server;
+
+
+CREATE FOREIGN TABLE salaryc2
+(
+    id integer NOT NULL,
+    name varchar(128) NOT NULL,
+    age integer NOT NULL,
+    gender char(1) NOT NULL,
+    edu char(1),
+    avghours integer,
+    salaryk integer NOT NULL,
+    email varchar(128) NOT NULL    
+)
+SERVER cstore_server
+OPTIONS(compression 'pglz');
+
+
+CREATE TABLESPACE dtest LOCATION '/var/lib/postgresql/12/main/dtestdir';
+
+CREATE DATABASE db1;
+CREATE TABLE db1.orders (   orderkey INTEGER,    customer VARCHAR(45) ) ENGINE=ColumnStore;
+
+CREATE TABLE testable (   orderkey INTEGER,    customer VARCHAR(45) ) SERVER cstore_server
+;
+
+	
+insert into salary values (1,'Doug',45, 'M','M',45, 100,'doug@foostack.ai');
+insert into salary values (2,'Caprica',55, 'F','P',55,60, 'cap@foostack.ai');
+insert into salary values (3,'Chris',35, 'M','B',75, 80, 'chris@foostack.ai');
+insert into salary values (4,'Mancy',25, 'F','B',44, 99, 'mancy@foostack.ai');
+
+
+insert into salaryc select * from salary;
+
+
+insert into salary2 values (1,'Doug',45, 'M','M',45, 100,'doug@foostack.ai');
+insert into salary2 values (2,'Caprica',55, 'F','P',55,60, 'cap@foostack.ai');
+insert into salary2 values (3,'Chris',35, 'M','B',75, 80, 'chris@foostack.ai');
+insert into salary2 values (4,'Mancy',25, 'F','B',44, 99, 'mancy@foostack.ai');
+
