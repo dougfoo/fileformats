@@ -6,6 +6,7 @@
     "Gender": "M",
     "Edu": "B",
     "AvgHours": 40,
+    "Email": "foo@foostack.ai",
     "SalaryK": 80
   },
   {
@@ -15,6 +16,7 @@
     "Gender": "F",
     "Edu": "B",
     "AvgHours": 40,
+    "Email": "jen@foostack.ai",
     "SalaryK": 82
   },
   {
@@ -24,6 +26,7 @@
     "Gender": "M",
     "Edu": "P",
     "AvgHours": 45,
+    "Email": "dave@foostack.ai",
     "SalaryK": 101
   },
   {
@@ -33,6 +36,7 @@
     "Gender": "F",
     "Edu": "M",
     "AvgHours": 50,
+    "Email": "nan@foostack.ai",
     "SalaryK": 110
   },
   {
@@ -42,6 +46,7 @@
     "Gender": "M",
     "Edu": "M",
     "AvgHours": 60,
+    "Email": "killa@foostack.ai",
     "SalaryK": 150
   }
 ]
