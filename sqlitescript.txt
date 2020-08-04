@@ -65,6 +65,8 @@ insert into salary values (4,'Mancy',25, 'F','B',44, 99, 'mancy@foostack.ai');
 insert into salaryc select * from salary;
 
 
+insert into salaryc2 select * from salaryc;
+
 insert into salary2 values (1,'Doug',45, 'M','M',45, 100,'doug@foostack.ai');
 insert into salary2 values (2,'Caprica',55, 'F','P',55,60, 'cap@foostack.ai');
 insert into salary2 values (3,'Chris',35, 'M','B',75, 80, 'chris@foostack.ai');

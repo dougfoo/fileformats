@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/c//Users/DougFoo/anaconda3/python",
+    "python.linting.enabled": true,
+    "python.unitTest.pyTestEnabled": false,
+    "python.linting.pylintPath": "/Users/dougfoo/anaconda3/scripts/pylint",
+    "python.unitTest.pyTestArgs": [
+        "."
+    ]
+}
