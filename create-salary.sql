@@ -4,7 +4,8 @@
 DROP TABLE salary;
 DROP FOREIGN TABLE salarycs;
 
-CREATE TABLESPACE salaryts LOCATION '/var/lib/postgresql/12/main/dtestdir';
+# bad name shoudl be non-cstore ts
+CREATE TABLESPACE salaryts LOCATION '/var/lib/postgresql/10/main/cstorets';
 
 CREATE EXTENSION cstore_fdw;
 CREATE SERVER cstore_server FOREIGN DATA WRAPPER cstore_fdw;

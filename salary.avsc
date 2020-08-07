@@ -1,0 +1,13 @@
+{"namespace": "salary.avro",
+ "type": "record",
+ "name": "Salary",
+ "fields": [
+     {"name": "id", "type": "int"},
+     {"name": "fname",  "type": "string"},
+     {"name": "lname",  "type": "string"},
+     {"name": "department",  "type": "string"},
+     {"name": "jobtitle",  "type": "string"},
+     {"name": "gender",  "type": "string"},
+     {"name": "salary", "type": "int"}
+ ]
+}
